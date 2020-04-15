@@ -7,18 +7,14 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("STCK_DISCRIMINATOR")
+@DiscriminatorValue("ST")
 public class Stock extends Investment {
-
-
-
+	
 	@Column(name = "SHARE_PRICE")
 	private BigDecimal sharePrice;
 
 	@Column(name = "QUANTITY")
 	private BigDecimal quantity;
-
-
 
 	public BigDecimal getSharePrice() {
 		return sharePrice;

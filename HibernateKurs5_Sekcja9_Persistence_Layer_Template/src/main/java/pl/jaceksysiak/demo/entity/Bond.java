@@ -10,10 +10,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@DiscriminatorValue("BND_DISCRIMINATOR")
+@DiscriminatorValue("BND")
 public class Bond extends Investment{
-
-
 
 	@Column(name = "VALUE")
 	private BigDecimal value;

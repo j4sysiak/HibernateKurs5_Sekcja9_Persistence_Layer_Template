@@ -22,7 +22,6 @@ import javax.persistence.TableGenerator;
 @Table(name="INVESTMENT")
 public abstract class Investment {
 
-	
 	@Id
 	@GeneratedValue
 	@Column(name="INVESTMENT_ID")
@@ -31,7 +30,7 @@ public abstract class Investment {
 	@JoinColumn(name="PORTFOLIO_ID")
 	@ManyToOne(cascade=CascadeType.ALL)
 	private Portfolio portfolio;
-
+	
 	@Column(name = "NAME")
 	protected String name;
 
@@ -41,26 +40,6 @@ public abstract class Investment {
 	@Column(name = "PURCHASE_DATE")
 	protected Date purchaseDate;
 
-	
-	
-	public Long getInvestmentId() {
-		return investmentId;
-	}
-
-	public void setInvestmentId(Long investmentId) {
-		this.investmentId = investmentId;
-	}
-
-	public Portfolio getPortfolio() {
-		return portfolio;
-	}
-
-	public void setPortfolio(Portfolio portfolio) {
-		this.portfolio = portfolio;
-	}
-	
-	
-	
 	public String getName() {
 		return name;
 	}
@@ -85,4 +64,22 @@ public abstract class Investment {
 		this.purchaseDate = purchaseDate;
 	}
 
+	public Long getInvestmentId() {
+		return investmentId;
+	}
+
+	public void setInvestmentId(Long investmentId) {
+		this.investmentId = investmentId;
+	}
+
+	public Portfolio getPortfolio() {
+		return portfolio;
+	}
+
+	public void setPortfolio(Portfolio portfolio) {
+		this.portfolio = portfolio;
+	}
+
+	
+	
 }
