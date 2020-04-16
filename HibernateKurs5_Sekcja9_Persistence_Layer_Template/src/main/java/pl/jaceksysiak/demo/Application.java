@@ -89,7 +89,7 @@ public class Application {
 
 	private static User createUser() {
 		User user = new User();
-		Address address = createAddress();
+		//Address address = createAddress();
 		user.setAddresses(Arrays.asList(new Address[] { createAddress() }));
 		user.setBirthDate(new Date());
 		user.setCreatedBy("Kevin Bowersox");

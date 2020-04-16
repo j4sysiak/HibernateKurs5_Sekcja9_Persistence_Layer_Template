@@ -41,7 +41,8 @@ public class AbstractDao<T,ID extends Serializable> implements Dao<T,ID> {
 	public T findById(ID id) {
 		return (T) getSession().load(this.getPersistentClass(), id);
 	}
-
+   
+	//@Override
 	public List<T> findAll() {
 		return this.findByCriteria();
 	}
@@ -56,19 +57,24 @@ public class AbstractDao<T,ID extends Serializable> implements Dao<T,ID> {
 		return (List<T>) crit.list();
 		
 	}
+	
+	//@Override
 	public T save(T entity) {
 		this.getSession().saveOrUpdate(entity);
 		return entity;
 	}
 
+	//@Override
 	public void delete(T entity) {
 		this.getSession().delete(entity);
 	}
 
+	//@Override
 	public void flush() {
 		this.getSession().flush();
 	}
 
+	//@Override
 	public void clear() {
 		this.getSession().clear();
 	}
